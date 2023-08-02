@@ -1,10 +1,7 @@
-const name = 'Bogdan'
-const postsQty = 23
-
-const userProfile = {
-    name, // сокращенный вариант
-    postsQty,
-    hasSignAgr: false
+const myCity = {
+    city: 'New York',
+    cityGreeting() {
+        console.log('Greeting!!')
+    }
 }
-
-console.log(userProfile) // { name: 'Bogdan', postsQty: 23, hasSignAgr: false }
+myCity.cityGreeting() // Greeting!!
