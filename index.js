@@ -1,6 +1,11 @@
-a = '123456789'
-b = 1
-c = null
-d = 'zxcvb'
-console.log(a && b && c && d) // null (возвращает последнее, если все неложные или первое ложное)
-console.log(a || b || c || d) // 123456789 (возвращает первое неложное)
+function myFunc() {
+    console.log('Выполнено!')
+}
+
+let a = 'qwer'
+let b = 1
+let c = true
+let d = '0'
+
+/* Не нужно if(...){...} - 1 строка*/
+a && b && c && d && myFunc()
