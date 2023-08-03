@@ -1,11 +1,27 @@
-function myFunc() {
-    console.log('Выполнено!')
+const buttonInfo = {
+    text: 'Buy'
 }
 
-let a = 'qwer'
-let b = 1
-let c = true
-let d = '0'
+const buttonStyle = {
+    color: 'yellow',
+    witdh: 200,
+    height: 300
+}
 
-/* Не нужно if(...){...} - 1 строка*/
-a && b && c && d && myFunc()
+const button = {
+    ...buttonInfo,
+    ...buttonStyle,
+    id: 'btnButton'
+}
+console.table(button)
+/*
+┌─────────┬─────────────┐
+│ (index) │   Values    │
+├─────────┼─────────────┤
+│  text   │    'Buy'    │
+│  color  │  'yellow'   │
+│  witdh  │     200     │
+│ height  │     300     │
+│   id    │ 'btnButton' │
+└─────────┴─────────────┘
+*/
