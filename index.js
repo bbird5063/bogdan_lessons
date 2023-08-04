@@ -1,20 +1,11 @@
-const newPost = (post, addedAt = Date()) => ({ // зачем круглые скобки(({) ??? Написано в конспекте.
-    ...post,
-    addedAt, // сокращенная форма от "addedAt: addedAt"
-})
-
+const newPost = (post, addedAt = Date()) => {
+    return {
+        ...post,
+        addedAt,
+    }
+}
 const firstPost = {
     id: 1,
     author: 'Bogdan',
 }
-//newPost(firstPost)
 console.table(newPost(firstPost))
-/*
-┌─────────┬──────────────────────────────────────────────────────────────────────┐
-│ (index) │                                Values                                │
-├─────────┼──────────────────────────────────────────────────────────────────────┤
-│   id    │                                  1                                   │
-│ author  │                               'Bogdan'                               │
-│ addedAt │ 'Fri Aug 04 2023 12:54:58 GMT+0300 (Восточная Европа, летнее время)' │
-└─────────┴──────────────────────────────────────────────────────────────────────┘
-*/
