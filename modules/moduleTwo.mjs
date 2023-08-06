@@ -1,4 +1,7 @@
-import sumNum from './moduleOne.mjs' // import... всегда в начале файла
+import { // в начале файла
+    one as oneRenamed, // ИМЕНА ДОЛЖНЫ СОВПАДАТЬ, НО МОЖНО ПЕРЕИМЕНОВЫВАТЬ "... as oneRenamed"
+    two,
+} from './moduleOne.mjs'
 
-const res1 = sumNum(100, 50);
-console.log(res1);
+console.log(oneRenamed); // 1
+console.log(two); // 'two'

@@ -1,3 +1,7 @@
-const sum = (a, b) => a + b // неявный возврат, return не нужден
+const one = 1;
+const two = 'two'
 
-export default sum
+export {
+    one,
+    two,
+}
