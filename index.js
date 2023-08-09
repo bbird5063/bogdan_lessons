@@ -1,15 +1,13 @@
-const userProfile = {
-    name: 'Bogdan',
-    commentsQty: 23,
-    hasSignAgr: false,
-}
+const timerPromise = () => // '() =>' - возвращает 'new Promise'
+    new Promise((resolve, reject) => // '(...) =>' - запускает  'setTimeout'
+        setTimeout(() => resolve(), 5000)) // вызовем resolve(исполним промис) через 2 сек.
 
-const userInfo = ({ name, commentsQty }) => { // параметр userInfo: "{ name, commentsQty } = userInfo" (деструктуризация объекта)
-    if (!commentsQty) {
-        return `User ${name} has no comments`;
-    }
-    return `User ${name} has ${commentsQty} comments`;
-}
 
-console.log(userInfo(userProfile));// вызываем функцию userInfo с аргументом объект userInfo
-// User Bogdan has 23 comments
+const asyncFn = async () => {
+    const startTime = performance.now();
+    console.log(`Start`);
+    await timerPromise(); // await - мы ждем результата (возврата значения-промиса) timerPromise() и только после этого и перейдем к следующей строке
+    const endTime = performance.now();
+    console.log(`End (${Math.round((endTime - startTime) / 1000)} сек.)`);
+}
+asyncFn();
